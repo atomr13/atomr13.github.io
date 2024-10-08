@@ -1,25 +1,19 @@
-import { skeleton } from '../../utils';
+import { faStar, faStarHalfAlt, faStarOutline } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SkillCard = ({
-  loading,
-  skills,
-}: {
-  loading: boolean;
-  skills: string[];
-}) => {
-  const renderSkeleton = () => {
-    const array = [];
-    for (let index = 0; index < 12; index++) {
-      array.push(
-        <div key={index}>
-          {skeleton({ widthCls: 'w-16', heightCls: 'h-4', className: 'm-1' })}
-        </div>,
-      );
+const renderStars = (rating) => {
+  const stars = [];
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
+    } else {
+      stars.push(<FontAwesomeIcon key={i} icon={faStarOutline} />);
     }
+  }
+  return stars;
+};
 
-    return array;
-  };
-
+const SkillCard = ({ loading, skills }) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -41,7 +35,10 @@ const SkillCard = ({
                     key={index}
                     className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
                   >
-                    {skill}
+                    <span>{skill.name}</span> 
+                    <div className="ml-2">
+                      {renderStars(skill.rating)}
+                    </div>
                   </div>
                 ))}
           </div>
