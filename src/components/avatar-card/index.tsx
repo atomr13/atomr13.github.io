@@ -73,7 +73,13 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           <div className="mt-3 text-base-content text-opacity-60 font-mono">
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio}
+              : (
+                <ul className="list-none space-y-2">
+                  <li>👾 I’m interested in LLMs, Gen AI, ML</li>
+                  <li>🌱 I’m currently learning Python for Gen AI</li>
+                  <li>📚 I’m currently practicing on topics: Generative AI Applications</li>
+                </ul>
+              )}
           </div>
         </div>
         {resumeFileUrl &&

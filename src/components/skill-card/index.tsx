@@ -1,51 +1,63 @@
-import { faStar, faStarHalfAlt, faStarOutline } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'; // Empty stars
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const renderStars = (rating) => {
+
+interface Skill {
+  name: string;
+  rating: number;
+}
+
+const renderStars = (rating: number) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
-    if (i < rating) {
-      stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
-    } else {
-      stars.push(<FontAwesomeIcon key={i} icon={faStarOutline} />);
-    }
+    stars.push(
+      <FontAwesomeIcon key={i} icon={i < rating ? faStar : faStarRegular} />
+    );
   }
   return stars;
 };
 
-const SkillCard = ({ loading, skills }) => {
+
+
+const skeleton = ({ widthCls, heightCls, className }: { widthCls: string; heightCls: string; className: string }) => (
+  <div className={`${widthCls} ${heightCls} ${className}`} />
+);
+
+const renderSkeleton = () => {
+  const array = [];
+  for (let index = 0; index < 12; index++) {
+    array.push(
+      <div key={index}>
+        {skeleton({ widthCls: 'w-16', heightCls: 'h-4', className: 'm-1' })}
+      </div>,
+    );
+  }
+  return array;
+};
+
+const SkillCard = ({
+  loading,
+  skills,
+}: {
+  loading: boolean;
+  skills: Skill[];
+}) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
-      <div className="card-body">
-        <div className="mx-3">
-          <h5 className="card-title">
-            {loading ? (
-              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
-            ) : (
-              <span className="text-base-content opacity-70">Tech Stack</span>
-            )}
-          </h5>
+      {loading ? renderSkeleton() : (
+        <div className="grid grid-cols-2 gap-4 text-center">
+          {skills.map((skill, index) => (
+            <div key={index} className="skill">
+              <span className="font-semibold">{skill.name}</span>
+              <div>{renderStars(skill.rating)}</div>
+            </div>
+          ))}
         </div>
-        <div className="p-3 flow-root">
-          <div className="-m-1 flex flex-wrap justify-center">
-            {loading
-              ? renderSkeleton()
-              : skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
-                  >
-                    <span>{skill.name}</span> 
-                    <div className="ml-2">
-                      {renderStars(skill.rating)}
-                    </div>
-                  </div>
-                ))}
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
 
 export default SkillCard;
+
