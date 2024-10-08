@@ -49,8 +49,8 @@ const SkillCard = ({
         <div className="grid grid-cols-2 gap-4 text-center">
           {skills.map((skill, index) => (
             <div key={index} className="skill">
-              <span className="font-semibold">{skill.name}</span>
-              <div>{renderStars(skill.rating)}</div>
+              <span className="font-semibold text-base-content opacity-70">{skill.name}</span>
+              <div className='text-base-content text-opacity-60'>{renderStars(skill.rating)}</div>
             </div>
           ))}
         </div>
