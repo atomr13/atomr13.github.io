@@ -35,10 +35,10 @@ const CONFIG = {
         {
           title: 'Sentiment Analysis with AI',
           description:
-            'Soon to be Updated',
+            'This is a sentiment analysis web app that uses a pre-trained BERT model to classify user reviews as positive or negative. The app tracks and counts the total number of positive and negative reviews.',
           imageUrl:
             '/public/sentiment.webp',
-          link: 'https://example.com',
+          link: 'https://github.com/atomr13/ai-sentiment-analysis.git',
         },
         {
           title: 'Image Classification with Transfer Learning',
