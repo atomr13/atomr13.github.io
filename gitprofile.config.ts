@@ -118,11 +118,11 @@ const CONFIG = {
     },
   ],
   certifications: [
-    {
-      name: 'Power BI Data Analyst Associate',
-      body: 'Microsoft',
-      year: 'March 2022',
-      //link: 'https://www.credly.com/badges/a449c62c-20ae-4303-8194-8106d6b36963/linked_in_profile',
+     {
+      name: 'IBM AI Developer',
+      body: 'IBM on Coursera',
+      year: 'October 2024',
+      link: 'https://coursera.org/share/a9190a9c33c5c9f54ba0dda68f2b6e15',
     },
     {
       name: 'Power Platform App Maker Associate',
@@ -130,11 +130,11 @@ const CONFIG = {
       year: 'March 2023',
       //link: 'https://www.credly.com/badges/a449c62c-20ae-4303-8194-8106d6b36963/linked_in_profile',
     },
-     {
-      name: 'IBM AI Developer',
-      body: 'IBM on Coursera',
-      year: 'October 2024',
-      link: 'https://coursera.org/share/a9190a9c33c5c9f54ba0dda68f2b6e15',
+    {
+      name: 'Power BI Data Analyst Associate',
+      body: 'Microsoft',
+      year: 'March 2022',
+      //link: 'https://www.credly.com/badges/a449c62c-20ae-4303-8194-8106d6b36963/linked_in_profile',
     },
   ],
   educations: [
