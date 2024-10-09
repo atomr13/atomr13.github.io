@@ -140,7 +140,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'University of Wroclaw',
-      degree: 'Bachelor',
+      degree: 'BA/Economics, Bachelor',
       from: '2018',
       to: '2021',
     },
