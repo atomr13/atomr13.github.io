@@ -93,13 +93,13 @@ const CONFIG = {
   skills: [
     { name: 'Python', rating: 3 },
     { name: 'HTML', rating: 2 },
-    { name: 'JavaScript', rating: 3 },
+    { name: 'JavaScript', rating: 2 },
     { name: 'CSS', rating: 2 },
-    { name: 'SQL', rating: 2 },
+    { name: 'SQL', rating: 3 },
     { name: 'Git', rating: 3 },
     { name: 'Power BI', rating: 4 },
-    { name: 'Power Apps', rating: 3 },
-    { name: 'Power Automate', rating: 3 },
+    { name: 'Power Apps', rating: 4 },
+    { name: 'Power Automate', rating: 4 },
   ],
   experiences: [
     {
@@ -129,6 +129,12 @@ const CONFIG = {
       body: 'Microsoft',
       year: 'March 2023',
       //link: 'https://www.credly.com/badges/a449c62c-20ae-4303-8194-8106d6b36963/linked_in_profile',
+    },
+     {
+      name: 'IBM AI Developer',
+      body: 'IBM on Coursera',
+      year: 'October 2024',
+      link: 'https://coursera.org/share/a9190a9c33c5c9f54ba0dda68f2b6e15',
     },
   ],
   educations: [
