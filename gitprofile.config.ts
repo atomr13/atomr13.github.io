@@ -41,12 +41,12 @@ const CONFIG = {
           link: 'https://github.com/atomr13/ai-sentiment-analysis.git',
         },
         {
-          title: 'Image Classification with Transfer Learning',
+          title: 'Handwritten Digit Recognition with MNIST',
           description:
-            'Soon to be Updated',
+            'This project implements a Convolutional Neural Network (CNN) model for recognizing handwritten digits (0-9) using the MNIST dataset. The model achieves high accuracy (99.07%) on the MNIST test set and can predict handwritten digits from images that are preprocessed to match the MNIST dataset format.',
           imageUrl:
             '/imgclass.webp',
-          link: 'https://example.com',
+          link: 'https://github.com/atomr13/ai-digit-recognition.git',
         },
         {
           title: 'Trials',
