@@ -49,12 +49,12 @@ const CONFIG = {
           link: 'https://github.com/atomr13/ai-digit-recognition.git',
         },
         {
-          title: 'Trials',
+          title: 'Stock Price Prediction App',
           description:
-            'Soon to be Updated',
+            'This project is a stock price prediction application that uses a Long Short-Term Memory (LSTM) model to predict future stock prices based on historical data. The model is built with TensorFlow/Keras and is integrated into a user-friendly web interface using Streamlit.',
           imageUrl:
             '/imgclass.webp',
-          link: 'https://example.com',
+          link: 'https://github.com/atomr13/ai-stock-predict.git',
         },
       ],
     },
